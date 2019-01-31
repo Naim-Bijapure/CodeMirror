@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func multiply(x, y int) int {
+	return x * y
+}
+
+func greetPerson(name string) string {
+	return "Hello " + name
+}
+
+// Go does not support default values for optional parameters
+
+func main() {
+
+	i := multiply(6, 9)
+	// 54
+
+	s := greetPerson("Ford Prefect")
+	// "Hello Ford Prefect"
+
+	fmt.Println(i, s)
+
+}
