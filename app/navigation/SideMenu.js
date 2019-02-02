@@ -34,7 +34,7 @@ class SideMenu extends Component {
                 <View style={styles.button}  >
                     <Text style={styles.buttonText} > {folder.text}</Text>
                     <Right style={styles.icon}>
-                    <Icon name="arrow-forward" style={{color:'white',right:10}} />
+                    <Icon name="arrow-forward" style={{color:'#ddd9da',right:10}} />
                   </Right>
                 </View>
             </TouchableNativeFeedback>
@@ -50,10 +50,13 @@ class SideMenu extends Component {
         return (
             <Container>
                 <View style={styles.headerContainer}>
-                    <ImageBackground source={{ uri: "https://www.sketchappsources.com/resources/source-image/android-n-logo-kunalbodke.jpg" }} style={{ flex: 1, width: 280, justifyContent: 'center' }} >
-                        <Text style={styles.headerText}>Naim Bijapure</Text>
-                        <Text style={styles.headerText}>Naimbijapure7407@gmail.com</Text>
+                    <ImageBackground source={require('../assests/rect4661.png')} style={{ flex: 1, width: 290,height:210,top:-23, justifyContent: 'center' ,transform: [{ scale: 0.6 }],flexDirection:'row' }} >
+                        {/* <Text style={styles.headerText}>Naim Bijapure</Text> */}
                     </ImageBackground>
+                    
+                    
+                 <Text style={styles.headerText}>Developed By :- Naim Bijapure</Text>
+                 <Text style={styles.headerText}>Naimbijapure7407@gmail.com</Text>
                 </View>
                 <Content>
                     <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
@@ -85,13 +88,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     headerContainer: {
-        height: 150,
+        height: 180,
+        backgroundColor:'#cfcfcf'
     },
     headerText: {
-        color: 'black',
-    },
+        color: '#5c5c5c',
+        marginLeft:10
+        },
+
     screenContainer: {
-        paddingTop: 20
+        paddingTop: 2
     },
     screenStyle: {
         height: 30,
@@ -113,11 +119,11 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         padding: 10,
-        color: 'white'
+        color: '#ddd9da'
     },
     icon:{
         alignItems:'flex-end',
-        color:'white'
+        color:'#ddd9da'
 
     }
 

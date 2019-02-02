@@ -39,7 +39,7 @@ class Screen2 extends Component {
     this.props.data.view == 'SCREEN_2' ? this.CurrentLanguage = { ...this.props.data } : "";
 
     return (
-      <Container>
+      <Container style={{backgroundColor:'#ddd9da'}}>
         <Content>
       
           <Form >
@@ -65,7 +65,7 @@ class Screen2 extends Component {
              
               }}
               itemTextStyle={{ fontSize: 18, color: 'blue' }}
-              style={{ width: 180, height: 40, marginLeft: 230,backgroundColor:'white' }}
+              style={{ width: 180, height: 40, marginLeft: 230,backgroundColor:'#ddd9da' }}
               selectedValue={this.state.selected}
               onValueChange={this.onValueChange.bind(this)}
 

@@ -36,7 +36,7 @@ class Home extends Component {
   render() {
 
     return (
-      <Container>
+      <Container >
         <Header style={{ height: 45 }} >
           <Left>
             <Button transparent onPress={this.props.navigation.openDrawer}>
