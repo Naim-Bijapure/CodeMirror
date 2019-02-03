@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import { View, ScrollView, TouchableNativeFeedback, SafeAreaView, StyleSheet, ImageBackground, Image, Platform } from "react-native";
-// import { DrawerItems } from "react-navigation";
-import { Container, Header, Content, Button, Text, Badge,Right,Icon } from 'native-base';
+import { View, TouchableNativeFeedback, SafeAreaView, StyleSheet, ImageBackground } from "react-native";
+import { Container, Content,Text,Right,Icon } from 'native-base';
 import { connect } from "react-redux";
 import { DrawerActions } from 'react-navigation';
-import { Folder, Language, languageMenuItems, folderMenuItems } from "../containers/Lists";
-// import { UpdateFolder } from "../containers/codeService";
+import { folderMenuItems } from "../containers/Lists";
 import codeService from "../containers/CodeService";
-import Screen1 from "../components/Screen1";
 class SideMenu extends Component {
 
     constructor(props) {
@@ -51,7 +48,6 @@ class SideMenu extends Component {
             <Container>
                 <View style={styles.headerContainer}>
                     <ImageBackground source={require('../assests/rect4661.png')} style={{ flex: 1, width: 290,height:210,top:-23, justifyContent: 'center' ,transform: [{ scale: 0.6 }],flexDirection:'row' }} >
-                        {/* <Text style={styles.headerText}>Naim Bijapure</Text> */}
                     </ImageBackground>
                     
                     
@@ -130,14 +126,13 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
-
     return {
         data: state.data
     }
 }
+
 function mapDispatchToProps(dispatch) {
     return {
-        GetFolder: (folder) => { return dispatch(UpdateFolder(folder)) },
         GetLanguage1: () => ( dispatch(codeService.GetCode('SCREEN_1'))),
         GetLanguage2: () => (dispatch(codeService.GetCode('SCREEN_2')))
 

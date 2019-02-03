@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Button, Title, Content, Footer, FooterTab, Tab, Tabs, ScrollableTab, Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon, Right } from 'native-base';
+import { Button, Title,  Container, Header,Left, Body, Icon, Right } from 'native-base';
 import { connect } from "react-redux";
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
+import { DrawerActions } from 'react-navigation';
 
-import styles from "../containers/styles";
 import Screen1 from "./Screen1";
 import Screen2 from "./Screen2";
 import codeSerive from "../containers/CodeService";
-import { DrawerActions } from 'react-navigation';
 
 class Home extends Component {
 
@@ -65,16 +64,15 @@ class Home extends Component {
             />}
 
         />
-
-
       </Container>
+
+
     );
 
   } //! end render()
 
 
   componentDidMount() {
-    // this.props.UpdataCode();
     this.props.navigation.dispatch(DrawerActions.openDrawer());
     setTimeout(() => {
       this.props.navigation.dispatch(DrawerActions.closeDrawer());
@@ -95,16 +93,5 @@ class Home extends Component {
 
 // ?redux states
 
-function mapStateToProps(state) {
-  return {
-    data: state
-  }
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    UpdataCode: () => (dispatch(GetCode())),
-    GetTestLanguage: () => (dispatch(codeSerive.GetCode('SCREEN_2')))
 
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect()(Home);

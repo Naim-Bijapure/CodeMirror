@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { Platform,View } from "react-native";
-import { Container,Badge,Icon,  Left, Right, Form, Picker, Button, Header, Content, Card, CardItem, Text, Body } from 'native-base';
+import { View } from "react-native";
+import { Container,Badge,Icon,Form, Picker,  Content, Text, } from 'native-base';
 import SyntaxHighlighter from 'react-native-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/styles/hljs';
-import { atomDark, atomOneDark, vs, prism, funky, dark, darcula, okaidia, coy, solarizedlight } from 'react-syntax-highlighter/styles/prism';
-// import Icon from 'react-native-vector-icons/Ionicons';
+import {  darcula } from 'react-syntax-highlighter/styles/prism';
 import { languageMenuItems, Language } from '../containers/Lists';
 import codeService from '../containers/CodeService';
-import styles from "../containers/styles";
 
 class Screen2 extends Component {
 
@@ -82,27 +79,26 @@ class Screen2 extends Component {
             language='javascript'
             style={darcula}
             highlighter={"prism" || "hljs"}>
-
-
             {this.CurrentLanguage.data ? this.CurrentLanguage.data : 'Loading'}
           </SyntaxHighlighter>
-
         </Content>
       </Container>
+
+
+
     );
   } //! render end
   componentDidMount() {
     this.onValueChange("Python");
 
   }
-
-
-
-
 }// ! class end
-function mapStateToProps(state) {
-  console.log(state);
 
+
+
+
+
+function mapStateToProps(state) {
   return {
     data: state
   }
@@ -112,12 +108,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    UpdateData: () => { return dispatch(GetCode()) },
-    GetLanguage: (language) => (dispatch(UpdateLanguage(language))),
     GetLanguage: () => (dispatch(codeService.GetCode('SCREEN_2'))),
-
   }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(Screen2);
+
+
 

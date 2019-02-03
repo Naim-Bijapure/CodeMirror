@@ -1,5 +1,4 @@
-import { createAppContainer,createStackNavigator,createDrawerNavigator } from "react-navigation";
-import { connect } from "react-redux";
+import { createAppContainer,createDrawerNavigator } from "react-navigation";
 import Home from "../components/Home";
 import SideMenu from "./SideMenu";
 
