@@ -47,12 +47,12 @@ class SideMenu extends Component {
         return (
             <Container>
                 <View style={styles.headerContainer}>
-                    <ImageBackground source={require('../assests/rect4661.png')} style={{ flex: 1, width: 290,height:210,top:-23, justifyContent: 'center' ,transform: [{ scale: 0.6 }],flexDirection:'row' }} >
+                    <ImageBackground source={require('../assests/rect4661.png')} style={{ flex: 1, width: 290,height:210,top:-15, justifyContent: 'center' ,transform: [{ scale: 0.8 }],flexDirection:'row' }} >
                     </ImageBackground>
                     
                     
-                 <Text style={styles.headerText}>Developed By :- Naim Bijapure</Text>
-                 <Text style={styles.headerText}>Naimbijapure7407@gmail.com</Text>
+                 {/* <Text style={styles.headerText}>Developed By :- Naim Bijapure</Text> */}
+                 {/* <Text style={styles.headerText}>Naimbijapure7407@gmail.com</Text> */}
                 </View>
                 <Content>
                     <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
@@ -71,10 +71,10 @@ class SideMenu extends Component {
 
     } // ! end of render
 
-    getFile() {
-        alert(this.props.data);
+    // getFile() {
+    //     alert(this.props.data);
 
-    }
+    // }
 
 
 }
