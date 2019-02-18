@@ -47,7 +47,7 @@ class SideMenu extends Component {
         return (
             <Container>
                 <View style={styles.headerContainer}>
-                    <ImageBackground source={require('../assests/rect4661.png')} style={{ flex: 1, width: 290,height:210,top:-15, justifyContent: 'center' ,transform: [{ scale: 0.8 }],flexDirection:'row' }} >
+                    <ImageBackground source={{uri :'asset:/images/logo.png'}}   style={{ flex: 1, width: 290,height:210,top:-15, justifyContent: 'center' ,transform: [{ scale: 0.8 }],flexDirection:'row' }} >
                     </ImageBackground>
                     
                     
