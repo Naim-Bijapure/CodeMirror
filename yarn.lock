@@ -5463,6 +5463,13 @@ react-native-keyboard-aware-scroll-view@0.8.0:
     prop-types "^15.6.2"
     react-native-iphone-x-helper "^1.0.3"
 
+react-native-material-menu@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/react-native-material-menu/-/react-native-material-menu-0.4.2.tgz#1dc39c1744ef65d5e536badd5e4d6d640b1f43da"
+  integrity sha512-k4I56GKzmXDx1QDosRFGk5U8+z7Iec0MM1GM6R68fukwzEQn1UDBv8PkcwP7Z/2Ex+PfjDnTkYzCqWnCa88ouQ==
+  dependencies:
+    prop-types "^15.6.0"
+
 react-native-modal-dropdown@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/react-native-modal-dropdown/-/react-native-modal-dropdown-0.6.2.tgz#da6027b3546d2031fbce46242bffc95561e13599"

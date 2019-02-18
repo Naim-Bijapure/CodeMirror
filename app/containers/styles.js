@@ -17,6 +17,12 @@ const styles = StyleSheet.create({
       borderColor:'red',
       borderWidth:3,
     },
+    PrimaryColor:{
+      color:'#3f51b5',
+      fontSize:17,
+      fontWeight:"bold"
+      
+    }
     
   });
   export default styles;
