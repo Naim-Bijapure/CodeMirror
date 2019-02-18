@@ -43,7 +43,7 @@ class Home extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Code Mirror</Title>
+            <Title>Code Mirror about </Title>
           </Body>
           <Right />
         </Header>
